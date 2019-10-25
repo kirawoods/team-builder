@@ -26,12 +26,12 @@ function App() {
   ]);
   const addTeamMember = member => {
     const newMember = {
-      id: teamMembers.length + 1,
+      id: Date.now(),
       name: member.name,
       email: member.email,
       role: member.role
     };
-    setTeamMembers({ ...teamMembers, newMember });
+    setTeamMembers([...teamMembers, newMember]);
   };
   return (
     <div className="App">
