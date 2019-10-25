@@ -7,11 +7,9 @@ export const TeamMembers = props => {
       {props.teamList.map(member => {
         return (
           <div className="team-member-card" key={member.id}>
-            <h3>{member.name}</h3>
-            <ul>
-              <li>{member.email}</li>
-              <li>{member.role}</li>
-            </ul>
+            <h3 className="member-name">{member.name}</h3>
+            <p>{member.email}</p>
+            <p>{member.role}</p>
           </div>
         );
       })}
